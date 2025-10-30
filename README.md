@@ -1,23 +1,108 @@
-<<<<<<< HEAD
-# Salesforce DX Project: Next Steps
+# ⚙️ Calculadora Salesforce (APEX + LWC)
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+Este projeto é uma **Calculadora** desenvolvida com **Salesforce APEX** no backend e **Lightning Web Components (LWC)** no frontend.  
+O objetivo é demonstrar a integração entre lógica de negócio em APEX e interface moderna com LWC, servindo como projeto de portfólio e base de aprendizado para outros desenvolvedores Salesforce.
 
-## How Do You Plan to Deploy Your Changes?
+---
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+## 🚀 Funcionalidades
 
-## Configure Your Salesforce DX Project
+- Cálculos aritméticos básicos (soma, subtração, multiplicação, divisão)  
+- Backend em **APEX** para processamento dos valores  
+- Frontend em **LWC**, totalmente responsivo  
+- Integração com a plataforma **Salesforce DX**  
+- Código modular e fácil de adaptar a novos contextos  
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+---
 
-## Read All About It
+## 🧠 Tecnologias Utilizadas
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
-=======
-# Calculadora
-uma calculadora utilizando APEX e LWC
->>>>>>> a9d26bb17774c1544f6c8f97c7af8504f83bfd8b
+| Camada | Tecnologia |
+|--------|-------------|
+| Backend | APEX |
+| Frontend | Lightning Web Components (LWC) |
+| Plataforma | Salesforce DX |
+| IDE | Visual Studio Code |
+| Controle de Versão | Git + GitHub |
+
+---
+
+## 💻 Estrutura do Projeto
+
+Calculadora/
+│
+├── force-app/
+│ ├── main/
+│ │ ├── default/
+│ │ │ ├── classes/ # Código APEX
+│ │ │ │ ├── backEnd.cls
+│ │ │ │ └── backEnd.cls-meta.xml
+│ │ │ └── lwc/ # Componentes LWC
+│ │ │ └── frontEnd/
+│ │ │ ├── frontEnd.html
+│ │ │ ├── frontEnd.js
+│ │ │ └── frontEnd.js-meta.xml
+│ │ └── config/
+│ └── package.xml
+│
+├── README.md
+
+yaml
+Copiar código
+
+---
+
+## 🧩 Como Clonar e Rodar o Projeto Localmente
+
+1. **Clone o repositório:**
+git clone git@github.com:evertonvilar/Calculadora.git
+cd Calculadora
+
+2. **Autentique-se na sua org Salesforce (sandbox ou devhub):**
+sfdx force:auth:web:login -d -a DevHub
+
+3. **Crie uma scratch org (opcional para teste isolado):**
+sfdx force:org:create -f config/project-scratch-def.json -s -a calculadora
+
+4. **Envie o código para a org:**
+sfdx force:source:push
+
+5. **Abra a org e teste:**
+sfdx force:org:open
+Acesse o app Calculadora
+
+🤝 Contribuições
+Contribuições são muito bem-vindas!
+Sinta-se à vontade para abrir um Pull Request com melhorias, correções ou novas features.
+
+💡 Sugestões de evolução
+Adicionar histórico de cálculos
+
+Interface com SLDS (Salesforce Lightning Design System)
+
+Testes automatizados em APEX e Jest (para LWC)
+
+📄 Licença
+Este projeto é open-source sob a licença MIT.
+
+👤 Autor
+Everton Reinaldo Vilar
+📧 evertonreinaldovilar@gmail.com
+💼 LinkedIn
+💻 GitHub
+
+
+
+💡 **Dica extra**:  
+Se quiser deixar o README ainda mais atraente, posso adicionar:
+- um **print da calculadora LWC** no topo (exibido automaticamente no GitHub);
+- **badges visuais** de tecnologia (APEX, LWC, VSCode, GitHub, etc);
+- e uma seção “📸 Screenshots”.
+
+Quer que eu gere a **versão final com imagens e badges** (como os repositórios de portfólio mais profissionais)?
+
+
+
+
+
+
